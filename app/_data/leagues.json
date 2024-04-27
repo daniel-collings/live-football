@@ -1,0 +1,1755 @@
+{
+  "get": "leagues",
+  "parameters": {
+    "current": "true",
+    "code": "GB",
+    "type": "league"
+  },
+  "errors": [],
+  "results": 47,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "league": {
+        "id": 49,
+        "name": "National League - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/49.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2018,
+          "start": "2019-05-01",
+          "end": "2019-05-11",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 986,
+        "name": "Non League Div One - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/986.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2022,
+          "start": "2023-04-25",
+          "end": "2023-05-01",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 987,
+        "name": "U18 Premier League - Championship",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/987.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2022,
+          "start": "2023-05-10",
+          "end": "2023-05-10",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 993,
+        "name": "Non League Premier - Isthmian - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/993.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2022,
+          "start": "2023-04-26",
+          "end": "2023-05-01",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 994,
+        "name": "Non League Premier - Northern - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/994.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2022,
+          "start": "2023-04-25",
+          "end": "2023-05-01",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 995,
+        "name": "Non League Premier - Southern South - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/995.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2022,
+          "start": "2023-04-26",
+          "end": "2023-05-01",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 996,
+        "name": "Non League Premier - Southern Central - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/996.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2022,
+          "start": "2023-04-26",
+          "end": "2023-05-01",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 54,
+        "name": "Non League Div One - Northern West",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/54.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 60,
+        "name": "Non League Premier - Southern South",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/60.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 57,
+        "name": "Non League Div One - Isthmian South East",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/57.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 56,
+        "name": "Non League Div One - Southern South",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/56.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 933,
+        "name": "Non League Div One - Southern Central",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/933.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 52,
+        "name": "Non League Div One - Isthmian North",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/52.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-11",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 58,
+        "name": "Non League Premier - Isthmian",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/58.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 59,
+        "name": "Non League Premier - Northern",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/59.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 931,
+        "name": "Non League Premier - Southern Central",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/931.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 992,
+        "name": "Football League - Championship",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/992.png"
+      },
+      "country": {
+        "name": "Scotland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2024-04-27",
+          "end": "2024-05-04",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 55,
+        "name": "Non League Div One - Northern Midlands",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/55.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 932,
+        "name": "Non League Div One - Northern East",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/932.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 53,
+        "name": "Non League Div One - Isthmian South Central",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/53.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 179,
+        "name": "Premiership",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/179.png"
+      },
+      "country": {
+        "name": "Scotland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-05-19",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": true,
+              "statistics_players": true
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 703,
+        "name": "Professional Development League",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/703.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-14",
+          "end": "2024-05-14",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 695,
+        "name": "U18 Premier League - North",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/695.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-05-11",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 696,
+        "name": "U18 Premier League - South",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/696.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-12",
+          "end": "2024-05-11",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 702,
+        "name": "Premier League 2 Division One",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/702.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-11",
+          "end": "2024-04-29",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 985,
+        "name": "National League - South - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/985.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2024-04-23",
+          "end": "2024-04-28",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 984,
+        "name": "National League - North - Play-offs",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/984.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2024-04-23",
+          "end": "2024-04-28",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 407,
+        "name": "Championship",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/407.png"
+      },
+      "country": {
+        "name": "Northern-Ireland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-26",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/39.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-11",
+          "end": "2024-05-19",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": true,
+              "statistics_players": true
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": true,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 110,
+        "name": "Premier League",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/110.png"
+      },
+      "country": {
+        "name": "Wales",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-11",
+          "end": "2024-05-11",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 41,
+        "name": "League One",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/41.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": true,
+              "statistics_players": true
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 42,
+        "name": "League Two",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/42.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": true,
+              "statistics_players": true
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 731,
+        "name": "Football League - Lowland League",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/731.png"
+      },
+      "country": {
+        "name": "Scotland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-07-21",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 730,
+        "name": "Football League - Highland League",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/730.png"
+      },
+      "country": {
+        "name": "Scotland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-07-29",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 111,
+        "name": "FAW Championship",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/111.png"
+      },
+      "country": {
+        "name": "Wales",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-07-27",
+          "end": "2024-04-13",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 561,
+        "name": "Premier Intermediate League",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/561.png"
+      },
+      "country": {
+        "name": "Northern-Ireland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-26",
+          "end": "2024-04-27",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": false,
+              "lineups": false,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 40,
+        "name": "Championship",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/40.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-04",
+          "end": "2024-05-04",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": true,
+              "statistics_players": true
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": true,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 44,
+        "name": "FA WSL",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/44.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-10-01",
+          "end": "2024-05-18",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": true,
+              "statistics_players": true
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 408,
+        "name": "Premiership",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/408.png"
+      },
+      "country": {
+        "name": "Northern-Ireland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-04",
+          "end": "2024-05-01",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 184,
+        "name": "League Two",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/184.png"
+      },
+      "country": {
+        "name": "Scotland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-05-04",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 180,
+        "name": "Championship",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/180.png"
+      },
+      "country": {
+        "name": "Scotland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-04",
+          "end": "2024-05-03",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 183,
+        "name": "League One",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/183.png"
+      },
+      "country": {
+        "name": "Scotland",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-05-04",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 43,
+        "name": "National League",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/43.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-28",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 50,
+        "name": "National League - North",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/50.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-20",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 51,
+        "name": "National League - South",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/51.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-05",
+          "end": "2024-04-20",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 1022,
+        "name": "Premier League - Summer Series",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/1022.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-07-22",
+          "end": "2023-07-30",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": false,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": false
+          }
+        }
+      ]
+    },
+    {
+      "league": {
+        "id": 699,
+        "name": "Women's Championship",
+        "type": "League",
+        "logo": "https://media.api-sports.io/football/leagues/699.png"
+      },
+      "country": {
+        "name": "England",
+        "code": "GB",
+        "flag": "https://media.api-sports.io/flags/gb.svg"
+      },
+      "seasons": [
+        {
+          "year": 2023,
+          "start": "2023-08-26",
+          "end": "2024-04-28",
+          "current": true,
+          "coverage": {
+            "fixtures": {
+              "events": true,
+              "lineups": true,
+              "statistics_fixtures": false,
+              "statistics_players": false
+            },
+            "standings": true,
+            "players": true,
+            "top_scorers": true,
+            "top_assists": true,
+            "top_cards": true,
+            "injuries": false,
+            "predictions": true,
+            "odds": true
+          }
+        }
+      ]
+    }
+  ]
+}

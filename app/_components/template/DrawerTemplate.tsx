@@ -2,7 +2,7 @@ import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayou
 
 export default function DrawerTemplate({children, focus}: {children: React.ReactNode, focus: string}) {
     return (
-        <div className="drawer drawer-end md:drawer-open">
+        <div className={`drawer drawer-end ${focus === null ? "" : "md:drawer-open"}`}>
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle"/>
             <div className="drawer-content">
                 <ConstraintLayoutTemplate>

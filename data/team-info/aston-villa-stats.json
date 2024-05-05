@@ -1,0 +1,292 @@
+{
+  "get": "teams/statistics",
+  "parameters": {
+    "league": "39",
+    "season": "2023",
+    "team": "66"
+  },
+  "errors": [],
+  "results": 11,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": {
+    "league": {
+      "id": 39,
+      "name": "Premier League",
+      "country": "England",
+      "logo": "https://media.api-sports.io/football/leagues/39.png",
+      "flag": "https://media.api-sports.io/flags/gb.svg",
+      "season": 2023
+    },
+    "team": {
+      "id": 66,
+      "name": "Aston Villa",
+      "logo": "https://media.api-sports.io/football/teams/66.png"
+    },
+    "form": "LWWLWWWDWWLWWDWWWDLWDLWLWWWLDWLDWWD",
+    "fixtures": {
+      "played": {
+        "home": 18,
+        "away": 17,
+        "total": 35
+      },
+      "wins": {
+        "home": 12,
+        "away": 8,
+        "total": 20
+      },
+      "draws": {
+        "home": 3,
+        "away": 4,
+        "total": 7
+      },
+      "loses": {
+        "home": 3,
+        "away": 5,
+        "total": 8
+      }
+    },
+    "goals": {
+      "for": {
+        "total": {
+          "home": 45,
+          "away": 28,
+          "total": 73
+        },
+        "average": {
+          "home": "2.5",
+          "away": "1.6",
+          "total": "2.1"
+        },
+        "minute": {
+          "0-15": {
+            "total": 6,
+            "percentage": "8.33%"
+          },
+          "16-30": {
+            "total": 18,
+            "percentage": "25.00%"
+          },
+          "31-45": {
+            "total": 7,
+            "percentage": "9.72%"
+          },
+          "46-60": {
+            "total": 11,
+            "percentage": "15.28%"
+          },
+          "61-75": {
+            "total": 12,
+            "percentage": "16.67%"
+          },
+          "76-90": {
+            "total": 14,
+            "percentage": "19.44%"
+          },
+          "91-105": {
+            "total": 4,
+            "percentage": "5.56%"
+          },
+          "106-120": {
+            "total": null,
+            "percentage": null
+          }
+        }
+      },
+      "against": {
+        "total": {
+          "home": 25,
+          "away": 27,
+          "total": 52
+        },
+        "average": {
+          "home": "1.4",
+          "away": "1.6",
+          "total": "1.5"
+        },
+        "minute": {
+          "0-15": {
+            "total": 6,
+            "percentage": "11.32%"
+          },
+          "16-30": {
+            "total": 6,
+            "percentage": "11.32%"
+          },
+          "31-45": {
+            "total": 5,
+            "percentage": "9.43%"
+          },
+          "46-60": {
+            "total": 16,
+            "percentage": "30.19%"
+          },
+          "61-75": {
+            "total": 12,
+            "percentage": "22.64%"
+          },
+          "76-90": {
+            "total": 5,
+            "percentage": "9.43%"
+          },
+          "91-105": {
+            "total": 3,
+            "percentage": "5.66%"
+          },
+          "106-120": {
+            "total": null,
+            "percentage": null
+          }
+        }
+      }
+    },
+    "biggest": {
+      "streak": {
+        "wins": 3,
+        "draws": 1,
+        "loses": 1
+      },
+      "wins": {
+        "home": "6-1",
+        "away": "0-5"
+      },
+      "loses": {
+        "home": "0-4",
+        "away": "5-1"
+      },
+      "goals": {
+        "for": {
+          "home": 6,
+          "away": 5
+        },
+        "against": {
+          "home": 4,
+          "away": 5
+        }
+      }
+    },
+    "clean_sheet": {
+      "home": 4,
+      "away": 4,
+      "total": 8
+    },
+    "failed_to_score": {
+      "home": 1,
+      "away": 3,
+      "total": 4
+    },
+    "penalty": {
+      "scored": {
+        "total": 4,
+        "percentage": "100.00%"
+      },
+      "missed": {
+        "total": 0,
+        "percentage": "0%"
+      },
+      "total": 4
+    },
+    "lineups": [
+      {
+        "formation": "4-4-2",
+        "played": 14
+      },
+      {
+        "formation": "4-2-3-1",
+        "played": 11
+      },
+      {
+        "formation": "4-4-1-1",
+        "played": 6
+      },
+      {
+        "formation": "3-4-2-1",
+        "played": 1
+      },
+      {
+        "formation": "4-2-2-2",
+        "played": 1
+      },
+      {
+        "formation": "3-5-2",
+        "played": 1
+      },
+      {
+        "formation": "5-3-2",
+        "played": 1
+      }
+    ],
+    "cards": {
+      "yellow": {
+        "0-15": {
+          "total": 5,
+          "percentage": "5.68%"
+        },
+        "16-30": {
+          "total": 8,
+          "percentage": "9.09%"
+        },
+        "31-45": {
+          "total": 12,
+          "percentage": "13.64%"
+        },
+        "46-60": {
+          "total": 16,
+          "percentage": "18.18%"
+        },
+        "61-75": {
+          "total": 14,
+          "percentage": "15.91%"
+        },
+        "76-90": {
+          "total": 18,
+          "percentage": "20.45%"
+        },
+        "91-105": {
+          "total": 15,
+          "percentage": "17.05%"
+        },
+        "106-120": {
+          "total": null,
+          "percentage": null
+        }
+      },
+      "red": {
+        "0-15": {
+          "total": null,
+          "percentage": null
+        },
+        "16-30": {
+          "total": null,
+          "percentage": null
+        },
+        "31-45": {
+          "total": null,
+          "percentage": null
+        },
+        "46-60": {
+          "total": null,
+          "percentage": null
+        },
+        "61-75": {
+          "total": 1,
+          "percentage": "50.00%"
+        },
+        "76-90": {
+          "total": null,
+          "percentage": null
+        },
+        "91-105": {
+          "total": 1,
+          "percentage": "50.00%"
+        },
+        "106-120": {
+          "total": null,
+          "percentage": null
+        }
+      }
+    }
+  }
+}

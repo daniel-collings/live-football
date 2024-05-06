@@ -35,9 +35,11 @@ const Fixture: React.FC<FixtureProps> = ({ fixture, teams, goals }) => {
     });
 
     return (
+        <Link href={`/fixtures/${fixture.id}`}>
         <li className="flex items-center justify-between p-4 rounded-sm shadow-md">
             <div className="flex items-center justify-end space-x-4 w-1/3">
-                <Link href={`/teams/${stringToSlug(teams.home.name)}`}><span className="font-semibold">{teams.home.name}</span></Link>
+                <Link href={`/teams/${stringToSlug(teams.home.name)}-${teams.home.id}`}>
+                    <span className="font-semibold">{teams.home.name}</span></Link>
                 <img src={teams.home.logo} alt={teams.home.name} className="w-8 h-8"/>
             </div>
             <div className="flex items-center space-x-4">
@@ -54,6 +56,7 @@ const Fixture: React.FC<FixtureProps> = ({ fixture, teams, goals }) => {
                 <Link href={`/teams/${stringToSlug(teams.away.name)}`}><span className="font-semibold">{teams.away.name}</span></Link>
             </div>
         </li>
+        </Link>
     );
 };
 

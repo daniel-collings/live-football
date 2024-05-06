@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import {stringToSlug} from "@/utils/urlSlugger";
 
 export interface ILeagueProps {
     league: {
@@ -21,7 +22,7 @@ export default function LeagueCard({league, country}: ILeagueProps) {
     return (
         <div className="bg-white shadow-md rounded-lg overflow-hidden border-accent-content/5 border-[1px]">
             <div className="flex items-center justify-center h-48 overflow-clip">
-                <Link href={`/leagues/${league.name}`}>
+                <Link href={`/competitions/domestic/leagues/${stringToSlug(league.name)}-${league.id}`}>
                     <Image
                         src={league.logo}
                         alt={league.name}

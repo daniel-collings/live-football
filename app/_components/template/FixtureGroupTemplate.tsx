@@ -1,4 +1,5 @@
 import Fixture from "@/app/_components/Fixture";
+import React from "react";
 
 interface FixtureProps {
     fixture: {
@@ -33,6 +34,7 @@ export default function FixtureGroupTemplate<T extends FixtureProps>({fixtureSet
         <div className="overflow-hidden shadow sm:rounded-md">
             <ul role="list" className="divide-y divide-gray-200">
                 {fixtureSet.map((item:FixtureProps) => (
+                    // @ts-ignore
                     <Fixture key={item.fixture.id} fixture={item.fixture} goals={item.goals} teams={item.teams} />
                 ))}
             </ul>

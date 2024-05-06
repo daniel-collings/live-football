@@ -8,7 +8,12 @@ import _topAssists from '@/data/top-assists.json'
 import _topScores from '@/data/top-scorers.json'
 import {ColumnDef} from "@tanstack/react-table";
 
-export default function Page(slug: string) {
+interface PageProps {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function Page({params, searchParams}: PageProps) {
     // Assuming you have the four datasets imported or defined as separate variables
     const topYellowCards = _yellowCardStats
     const topScorers = _topScores

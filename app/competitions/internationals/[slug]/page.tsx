@@ -2,7 +2,12 @@ import _league_standing from "@/data/league-standings.json"
 import LeagueStandings from "@/app/_components/LeagueStanding";
 import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayoutTemplate";
 
-export default function Page(slug: string) {
+interface PageProps {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function Page({params, searchParams}: PageProps) {
     return(
         <div className="">
             <ConstraintLayoutTemplate>

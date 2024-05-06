@@ -4,7 +4,13 @@ import React, {useState} from "react";
 import {ILiveScoreProps, IMatchData} from "@/app/(matches)/live/page";
 import Link from "next/link";
 
-const LiveScores: React.FC<ILiveScoreProps> = ({ matches }) => {
+interface PageProps {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+    matches: IMatchData[]
+}
+
+export default function Page({params, searchParams, matches}: PageProps) {
     const [searchTerm, setSearchTerm] = useState('');
 
     const groupedMatches = matches.reduce((acc: { [key: string]: IMatchData[] }, match) => {
@@ -80,5 +86,3 @@ const LiveScores: React.FC<ILiveScoreProps> = ({ matches }) => {
         </div>
     );
 };
-
-export default LiveScores;

@@ -38,8 +38,12 @@ interface TeamData {
         };
     }[];
 }
+interface PageProps {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+}
 
-const TeamInfo: React.FC<{ teamData: TeamData }> = ({ teamData }) => {
+export default function Page({params, searchParams}: PageProps) {
     const { response } = _teamInformation;
     const { team, venue } = response[0];
 
@@ -98,7 +102,6 @@ const TeamInfo: React.FC<{ teamData: TeamData }> = ({ teamData }) => {
     );
 };
 
-export default TeamInfo;
 
 const TeamStatistics: React.FC<{ statistics: TeamStatistics }> = ({ statistics }) => {
     return (

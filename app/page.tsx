@@ -40,6 +40,7 @@ export default function Home() {
                 </div>
 
                 <div className="">
+                    {/*// @ts-ignore*/}
                     <LiveScores matches={response}/>
 
                 </div>

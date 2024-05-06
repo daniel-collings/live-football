@@ -7,9 +7,8 @@ import {
     getSortedRowModel,
     getFilteredRowModel,
     ColumnDef,
-    flexRender,
+    flexRender, getPaginationRowModel,
 } from '@tanstack/react-table';
-import {getPaginationRowModel} from "@tanstack/table-core";
 
 
 interface Player {

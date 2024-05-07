@@ -2,6 +2,8 @@
 
 import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayoutTemplate";
 import Image from "next/image";
+import {stringToSlug} from "@/utils/urlSlugger";
+import Link from "next/link";
 
 const data: CountryLeagues = {
     "England": [
@@ -132,10 +134,12 @@ export default function Page(){
                             <div className="carousel carousel-end md:gap-x-4 p-4 bg-base-300 space-x-4 rounded-box">
                                 {data[country].map((league: League, index: number) => (
                                     <div className="carousel-item" key={index}>
+                                        <Link href={`/leagues/${stringToSlug(league.leagueName)}-${league.leagueId}`}>
                                         <Image src={league.leagueImage}
                                                width={300}
                                                height={300}
                                                className="rounded-box max-h-56 max-w-auto" alt=""/>
+                                        </Link>
                                     </div>
                                 ))}
 

@@ -1,9 +1,7 @@
 "use client"
 
-import _leagues from "@/data/leagues.json"
-
-import LeagueCard, {ILeagueProps} from "@/app/_components/LeagueCard";
 import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayoutTemplate";
+import Image from "next/image";
 
 const data: CountryLeagues = {
     "England": [
@@ -129,16 +127,19 @@ export default function Page(){
                 <div className="space-y-8">
                     {Object.keys(data).map((country: string, i:number) => (
                         <div key={i}>
-                        <p className="font-bold text-lg">{country}</p>
+                            <p className="font-bold text-lg">{country}</p>
 
-                        <div className="carousel carousel-end md:gap-x-4 p-4 bg-base-300 space-x-4 rounded-box">
-                            {data[country].map((league:League, index:number)=> (
-                                <div className="carousel-item" key={index}>
-                                    <img src={league.leagueImage}
-                                         className="rounded-box max-h-56 max-w-auto"/>
-                                </div>
-                            ))}
-                        </div>
+                            <div className="carousel carousel-end md:gap-x-4 p-4 bg-base-300 space-x-4 rounded-box">
+                                {data[country].map((league: League, index: number) => (
+                                    <div className="carousel-item" key={index}>
+                                        <Image src={league.leagueImage}
+                                               width={300}
+                                               height={300}
+                                               className="rounded-box max-h-56 max-w-auto" alt=""/>
+                                    </div>
+                                ))}
+
+                            </div>
                         </div>
 
                     ))}

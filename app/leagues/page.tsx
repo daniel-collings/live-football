@@ -9,27 +9,27 @@ const data: CountryLeagues = {
     "England": [
         {
             leagueName: "Premier League",
-            leagueId: 1,
+            leagueId: 39,
             leagueImage: "/league-logos/prem-league.jpg",
         },
         {
             leagueName: "Championship",
-            leagueId: 1,
+            leagueId: 40,
             leagueImage: "/league-logos/efl-championship.jpg",
         },
         {
             leagueName: "League One",
-            leagueId: 1,
+            leagueId: 41,
             leagueImage: "/league-logos/ligue-1-logo.png",
         },
         {
             leagueName: "League Two",
-            leagueId: 1,
+            leagueId: 42,
             leagueImage: "/league-logos/ligue-1-logo.png",
         },
         {
             leagueName: "National League",
-            leagueId: 1,
+            leagueId: 43,
             leagueImage: "/league-logos/ligue-1-logo.png",
         },
     ],
@@ -121,7 +121,7 @@ interface League {
 interface CountryLeagues {
     [country: string]: League[];
 }
-
+console.log(data)
 export default function Page(){
         return(
         <div className="">
@@ -133,8 +133,9 @@ export default function Page(){
 
                             <div className="carousel carousel-end md:gap-x-4 p-4 bg-base-300 space-x-4 rounded-box">
                                 {data[country].map((league: League, index: number) => (
+
                                     <div className="carousel-item" key={index}>
-                                        <Link href={`/leagues/${stringToSlug(league.leagueName)}-${league.leagueId}`}>
+                                        <Link href={`/leagues/${stringToSlug(league.leagueName)}`}>
                                         <Image src={league.leagueImage}
                                                width={200}
                                                height={200}

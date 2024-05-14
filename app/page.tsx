@@ -13,27 +13,27 @@ export default function Home() {
         <ConstraintLayoutTemplate>
             <div className="space-y-16">
                 <div className="grid grid-cols-3 md:grid-cols-6 justify-between gap-4 items-center">
-                    <Link href="/leagues/premier-league-39"><Card><Image alt="Premier League"
+                    <Link href="/leagues/premier-league"><Card><Image alt="Premier League"
                                                                          src="/league-logos/prem-league.jpg"
                                                                          height={125}
                                                                          width={125}/></Card></Link>
-                    <Link href="/leagues/major-league-soccer-253"><Card><Image alt="Major League"
+                    <Link href="/leagues/major-league-soccer"><Card><Image alt="Major League"
                                                                                src="/league-logos/mls-logo.jpg"
                                                                                height={125}
                                                                                width={125}/></Card></Link>
-                    <Link href="/leagues/la-liga-140"><Card><Image alt="La Liga"
+                    <Link href="/leagues/la-liga"><Card><Image alt="La Liga"
                                                                    src="/league-logos/la-liga-logo.jpg"
                                                                    height={125}
                                                                    width={125}/></Card></Link>
-                    <Link href="/leagues/bundesliga-78"> <Card><Image alt="Bundesliga"
+                    <Link href="/leagues/bundesliga"> <Card><Image alt="Bundesliga"
                                                                       src="/league-logos/bundesliga-logo.jpg"
                                                                       height={125}
                                                                       width={125}/></Card></Link>
-                    <Link href="/leagues/ligue-1-61"> <Card><Image alt="Ligue 1"
+                    <Link href="/leagues/ligue-1"> <Card><Image alt="Ligue 1"
                                                                    src="/league-logos/ligue-1-logo.png"
                                                                    height={125}
                                                                    width={125}/></Card></Link>
-                    <Link href="/leagues/serie-a-135"> <Card><Image alt="Serie A"
+                    <Link href="/leagues/serie-a"> <Card><Image alt="Serie A"
                                                                     src="/league-logos/Serie-A.png"
                                                                     height={125}
                                                                     width={125}/></Card></Link>

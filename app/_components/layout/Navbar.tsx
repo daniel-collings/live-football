@@ -1,15 +1,14 @@
 "use client"
 
 import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { Dialog, Popover, Transition } from '@headlessui/react'
 import {
     Bars3Icon,
     ChartPieIcon,
     CursorArrowRaysIcon,
-    FingerPrintIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon, RectangleGroupIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from "next/link";
 
 const macthes = [
@@ -27,30 +26,11 @@ const macthes = [
     },
 ]
 
-const competitions = [
-    {
-        name: 'Continental',
-        description: 'Get a better understanding where your traffic is coming from',
-        href: '/competitions/continental',
-        icon: ChartPieIcon,
-    },
-    {
-        name: 'International',
-        description: 'Speak directly to your customers with our engagement tool',
-        href: '/competitions/internationals',
-        icon: CursorArrowRaysIcon,
-    },
-    { name: 'Domestic', description: 'Your customers’ data will be safe and secure', href: '/competitions/domestic', icon: FingerPrintIcon },
-]
 // const callsToAction = [
 //     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
 //     { name: 'Contact sales', href: '#', icon: PhoneIcon },
 //     { name: 'View all products', href: '#', icon: RectangleGroupIcon },
 // ]
-
-function classNames(...classes: any[]) {
-    return classes.filter(Boolean).join(' ')
-}
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -131,66 +111,7 @@ export default function Navbar() {
                         </Transition>
                     </Popover>
 
-                    {/*<Link href="/matches" className="text-sm font-semibold leading-6 ">*/}
-                    {/*    Matches*/}
-                    {/*</Link>*/}
-                    {/*<Link href="/competitions" className="text-sm font-semibold leading-6 ">*/}
-                    {/*    Competitions*/}
-                    {/*</Link>*/}
-                    <Popover>
-                        <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6">
-                            <Link href="/competitions">Competitions</Link>
-                            <ChevronDownIcon className="h-5 w-5 flex-none " aria-hidden="true"/>
-                        </Popover.Button>
 
-                        <Transition
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0 -translate-y-1"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 -translate-y-1"
-                        >
-                            <Popover.Panel
-                                className="absolute inset-x-0 top-0 -z-10  pt-14 shadow-lg ring-1 ring-gray-900/5 bg-base-300">
-                                <div
-                                    className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
-                                    {competitions.map((item) => (
-                                        <div key={item.name}
-                                             className="group relative rounded-lg p-6 text-sm leading-6 hover:">
-                                            <div
-                                                className="flex h-11 w-11 items-center justify-center rounded-lg  group-hover:">
-                                                <item.icon className="h-6 w-6  group-hover:text-primary"
-                                                           aria-hidden="true"/>
-                                            </div>
-                                            <a href={item.href} className="mt-6 block font-semibold ">
-                                                {item.name}
-                                                <span className="absolute inset-0"/>
-                                            </a>
-                                            <p className="mt-1 ">{item.description}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                                {/*<div className="">*/}
-                                {/*    <div className="mx-auto max-w-7xl px-6 lg:px-8">*/}
-                                {/*        <div className="grid grid-cols-3 divide-x divide-gray-900/5 border-x border-gray-900/5">*/}
-                                {/*            {callsToAction.map((item) => (*/}
-                                {/*                <a*/}
-                                {/*                    key={item.name}*/}
-                                {/*                    href={item.href}*/}
-                                {/*                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6  hover:bg-gray-100"*/}
-                                {/*                >*/}
-                                {/*                    <item.icon className="h-5 w-5 flex-none " aria-hidden="true" />*/}
-                                {/*                    {item.name}*/}
-                                {/*                </a>*/}
-                                {/*            ))}*/}
-                                {/*        </div>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
-                            </Popover.Panel>
-                        </Transition>
-                    </Popover>
                     <Link href="/leagues" className="text-sm font-semibold leading-6 ">
                         Leagues
                     </Link>
@@ -264,12 +185,7 @@ export default function Navbar() {
                                 >
                                     Fixtures
                                 </Link>
-                                <Link
-                                    href="/competitions"
-                                    className="-mx-3 block rounded-lg px-3 py-2  font-semibold leading-7  hover:"
-                                >
-                                    Competitions
-                                </Link>
+
                                 <Link
                                     href="/leagues"
                                     className="-mx-3 block rounded-lg px-3 py-2  font-semibold leading-7  hover:"

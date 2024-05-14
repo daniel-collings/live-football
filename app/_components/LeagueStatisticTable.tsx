@@ -164,7 +164,8 @@ const Table: React.FC<TableProps> = ({ data, columns }) => {
         onPaginationChange: setPagination,
         initialState: {
             pagination: {
-                pageSize: 20,      },
+                pageSize: 20,
+            },
         },
     });
 

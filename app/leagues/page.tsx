@@ -136,9 +136,9 @@ export default function Page(){
                                     <div className="carousel-item" key={index}>
                                         <Link href={`/leagues/${stringToSlug(league.leagueName)}-${league.leagueId}`}>
                                         <Image src={league.leagueImage}
-                                               width={300}
-                                               height={300}
-                                               className="rounded-box max-h-56 max-w-auto" alt=""/>
+                                               width={200}
+                                               height={200}
+                                               className="rounded-box max-h-56 h-full w-auto" alt=""/>
                                         </Link>
                                     </div>
                                 ))}

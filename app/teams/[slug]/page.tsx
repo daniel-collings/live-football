@@ -5,6 +5,7 @@ import _teamStats from "@/data/team-info/aston-villa-stats.json"
 import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayoutTemplate";
 import {stringToSlug} from "@/utils/urlSlugger";
 import Link from "next/link";
+import {notFound} from "next/navigation";
 
 interface TeamData {
     get: string;
@@ -47,6 +48,10 @@ export default function Page({params, searchParams}: PageProps) {
     const { response } = _teamInformation;
     const { team, venue } = response[0];
 
+    if(!params.slug.includes("aston-villa")){
+        notFound()
+    }
+
     return (
         <ConstraintLayoutTemplate>
             <div className="flex flex-wrap gap-4">
@@ -63,8 +68,7 @@ export default function Page({params, searchParams}: PageProps) {
                         />
                         <div className="flex flex-col">
                             <h1>{team.name} ({team.code})</h1>
-                            <Link href={`/competitions/domestic/league/${stringToSlug(team.name)}-${team.name}`}>
-                                <p>Premier League</p></Link>
+                                <p>Premier League</p>
                             <p>Founded {team.founded}</p>
                         </div>
                     </div>

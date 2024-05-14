@@ -121,7 +121,7 @@ interface League {
 interface CountryLeagues {
     [country: string]: League[];
 }
-console.log(data)
+
 export default function Page(){
         return(
         <div className="">

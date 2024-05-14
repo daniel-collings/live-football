@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from "next/link";
+import {stringToSlug} from "@/utils/urlSlugger";
 interface StandingsProps {
     standings: {
         rank: number;
@@ -70,6 +72,8 @@ const LeagueStandings: React.FC<StandingsProps> = ({ standings }) => {
                             <span className="text-sm ">{team.rank}</span>
                         </td>
                         <td className="px-4 py-2 whitespace-nowrap">
+                            <Link href={`/teams/${stringToSlug(team.team.name)}-${team.team.id}`}>
+
                             <div className="flex items-center">
                                 <div className="flex-shrink-0 h-10 w-10">
                                     <Image
@@ -86,6 +90,7 @@ const LeagueStandings: React.FC<StandingsProps> = ({ standings }) => {
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         </td>
                         <td className="px-4 py-2 whitespace-nowrap">
                             <span className="text-sm ">{team.all.played}</span>

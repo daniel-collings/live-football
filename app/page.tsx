@@ -12,15 +12,24 @@ export default function Home() {
 
         <ConstraintLayoutTemplate>
             <div className="space-y-16">
-                <div className="grid grid-cols-3 md:grid-cols-6 justify-between gap-4 items-center">
-                    <Link href="/leagues/premier-league"><Card><Image alt="Premier League"
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 justify-between gap-4 items-center">
+                    <Link href="/leagues/premier-league">
+
+                        <Card>
+                            <Image alt="Premier League"
                                                                          src="/league-logos/prem-league.jpg"
                                                                          height={125}
-                                                                         width={125}/></Card></Link>
-                    <Link href="/leagues/major-league-soccer"><Card><Image alt="Major League"
+                                                                         width={125}/>
+                        </Card>
+                    </Link>
+                    <Link href="/leagues/major-league-soccer">
+                        <Card>
+                            <Image alt="Major League"
                                                                                src="/league-logos/mls-logo.jpg"
                                                                                height={125}
-                                                                               width={125}/></Card></Link>
+                                                                               width={125}/>
+                        </Card>
+                    </Link>
                     <Link href="/leagues/la-liga"><Card><Image alt="La Liga"
                                                                    src="/league-logos/la-liga-logo.jpg"
                                                                    height={125}

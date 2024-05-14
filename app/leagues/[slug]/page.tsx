@@ -10,6 +10,7 @@ import {useState} from "react";
 import CustomStatTable, {Player} from "@/app/_components/CustomStatTable";
 import {restructureData} from "@/utils/restructurePlayerData";
 import Tabs from "@/app/_components/Tabs";
+import {notFound} from "next/navigation";
 
 interface PageProps {
     params: { slug: string };
@@ -28,6 +29,10 @@ export default function Page({params, searchParams}: PageProps) {
     const handleTabChange = (tab: string) => {
         setActiveTab(tab);
     };
+
+    if(params.slug !== "premier-league"){
+        notFound()
+    }
 
     const playerImageCell = (info: CellContext<PlayerStats, string>) => {
         const imageUrl = info.getValue();

@@ -1,44 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
 import _teamInformation from "@/data/team-info/aston-villa.json"
 import _teamStats from "@/data/team-info/aston-villa-stats.json"
 import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayoutTemplate";
-import {stringToSlug} from "@/utils/urlSlugger";
-import Link from "next/link";
 import {notFound} from "next/navigation";
 
-interface TeamData {
-    get: string;
-    parameters: {
-        id: string;
-    };
-    errors: any[];
-    results: number;
-    paging: {
-        current: number;
-        total: number;
-    };
-    response: {
-        team: {
-            id: number;
-            name: string;
-            code: string;
-            country: string;
-            founded: number;
-            national: boolean;
-            logo: string;
-        };
-        venue: {
-            id: number;
-            name: string;
-            address: string;
-            city: string;
-            capacity: number;
-            surface: string;
-            image: string;
-        };
-    }[];
-}
 interface PageProps {
     params: { slug: string };
     searchParams: { [key: string]: string | string[] | undefined };
@@ -54,96 +19,124 @@ export default function Page({params, searchParams}: PageProps) {
 
     return (
         <ConstraintLayoutTemplate>
-            <div className="flex flex-wrap gap-4">
-
-            <div className="shadow p-8 w-full md:w-fit justify-center lg:justify-between rounded-md items-center flex">
-                <div className="flex flex-col flex-wrap space-y-4">
-                    <div className="w-full md:w-auto flex flex-wrap items-center gap-4 justify-evenly">
-                        <Image
-                            className="aspect-auto h-auto w-auto"
-                            src={team.logo}
-                            width={200}
-                            height={200}
-                            alt="Background"
-                        />
-                        <div className="flex flex-col">
-                            <h1>{team.name} ({team.code})</h1>
-                                <p>Premier League</p>
-                            <p>Founded {team.founded}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="shadow p-8 w-full md:w-fit justify-center lg:justify-between rounded-md flex items-center">
-                <div className="flex flex-col lg:flex-row flex-wrap items-center space-y-4 lg:gap-4">
-
-                    <div className="w-full lg:w-fit flex flex-col flex-wrap items-center gap-4 xl:justify-evenly">
-                        <div className="flex flex-col">
-                            <p>Stadium: {venue.name}</p>
-                            <p>Capacity: {venue.capacity}</p>
-                            <p>Surface: {venue.surface}</p>
-                            <address>{venue.address}, {venue.city}</address>
-                        </div>
-                    </div>
-                        <Image
-                            className="aspect-auto h-auto w-auto rounded-box"
-                            src={venue.image}
-                            width={200}
-                            height={200}
-                            alt="Background"
-                        />
+            <div className="flex items-center mb-6">
+                <img src={team.logo} alt={`${team.name} Logo`} className="w-20 h-20 mr-6"/>
+                <div>
+                    <h1 className="text-4xl font-bold text-primary">{team.name}</h1>
+                    <p className="text-gray-600">{team.country}</p>
+                    <small className="text-gray-600">Founded: {team.founded}</small>
 
                 </div>
             </div>
-            </div>
-
-
-            <TeamStatistics statistics={_teamStats.response} />
-
-            </ConstraintLayoutTemplate>
+            {/*<TeamInfo data={_teamInformation}/>*/}
+            <Statistics data={_teamStats.response}/>
+        </ConstraintLayoutTemplate>
     );
 };
 
 
-const TeamStatistics: React.FC<{ statistics: TeamStatistics }> = ({ statistics }) => {
+interface StatisticsProps {
+    data: any;
+}
+const Statistics: React.FC<StatisticsProps> = ({ data }:any) => {
     return (
-        <div className="bg-white shadow-md rounded-lg p-6">
-            <div className="flex items-center mb-6">
-                <Image src={statistics.team.logo} alt={statistics.team.name} width={80} height={80} className="mr-4" />
-                <div>
-                    <h2 className="text-2xl font-bold">{statistics.team.name}</h2>
-                    <p className="text-gray-500">{statistics.league.name} - {statistics.league.season}</p>
-                </div>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
-                <div>
-                    <h3 className="text-xl font-bold mb-2">Fixtures</h3>
-                    <p><strong>Played:</strong> {statistics.fixtures.played.total}</p>
-                    <p><strong>Wins:</strong> {statistics.fixtures.wins.total}</p>
-                    <p><strong>Draws:</strong> {statistics.fixtures.draws.total}</p>
-                    <p><strong>Loses:</strong> {statistics.fixtures.loses.total}</p>
-                </div>
-                <div>
-                    <h3 className="text-xl font-bold mb-2">Goals</h3>
-                    <p><strong>For:</strong> {statistics.goals.for.total.total}</p>
-                    <p><strong>Against:</strong> {statistics.goals.against.total.total}</p>
-                    <p><strong>Clean Sheets:</strong> {statistics.clean_sheet.total}</p>
-                    <p><strong>Failed to Score:</strong> {statistics.failed_to_score.total}</p>
-                </div>
-                <div>
-                    <h3 className="text-xl font-bold mb-2">Biggest</h3>
-                    <p><strong>Wins (Home):</strong> {statistics.biggest.wins.home}</p>
-                    <p><strong>Wins (Away):</strong> {statistics.biggest.wins.away}</p>
-                    <p><strong>Loses (Home):</strong> {statistics.biggest.loses.home}</p>
-                    <p><strong>Loses (Away):</strong> {statistics.biggest.loses.away}</p>
-                </div>
-                <div>
-                    <h3 className="text-xl font-bold mb-2">Lineups</h3>
-                    {statistics.lineups.map((lineup, index) => (
-                        <p key={index}>{lineup.formation} ({lineup.played} played)</p>
-                    ))}
+        <div className="min-h-screen">
+            <div className="container mx-auto py-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    {/* Basic Info */}
+                    <div className="col-span-full rounded-lg shadow-md p-6">
+                        <h2 className="text-2xl font-bold text-primary mb-4">Info</h2>
+                        <div className="grid grid-cols-2 md:grid-cols-4 md:grid-flow-row justify-between gap-4">
+                                <p>Stadium: {_teamInformation.response[0].venue.name}</p>
+                                <p>Capacity: {_teamInformation.response[0].venue.capacity}</p>
+                                <p>Surface: {_teamInformation.response[0].venue.surface}</p>
+                                <address>Address: {_teamInformation.response[0].venue.address}, {_teamInformation.response[0].venue.city}</address>
+
+                        </div>
+                    </div>
+
+
+                    {/* League */}
+                    <div className="rounded-lg shadow-md p-6">
+                        <div className="flex items-center mb-4">
+                            <img src={data.league.logo} alt="League Logo" className="w-10 h-10 mr-4"/>
+                            <h2 className="text-2xl font-bold text-primary">{data.league.name}</h2>
+                        </div>
+                        <p className="text-gray-600">Country: {data.league.country}</p>
+                        <p className="text-gray-600">Season: {data.league.season}</p>
+                    </div>
+
+                    {/* Fixtures */}
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <h2 className="text-2xl font-bold text-primary mb-4">Fixtures</h2>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <p className="text-gray-600">Played: {data.fixtures.played.total}</p>
+                                <p className="text-gray-600">Wins: {data.fixtures.wins.total}</p>
+                            </div>
+                            <div>
+                                <p className="text-gray-600">Draws: {data.fixtures.draws.total}</p>
+                                <p className="text-gray-600">Losses: {data.fixtures.loses.total}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Goals */}
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <h2 className="text-2xl font-bold text-primary mb-4">Goals</h2>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <p className="text-gray-600">Total Scored: {data.goals.for.total.total}</p>
+                                <p className="text-gray-600">Average Scored: {data.goals.for.average.total}</p>
+                            </div>
+                            <div>
+                                <p className="text-gray-600">Total Conceded: {data.goals.against.total.total}</p>
+                                <p className="text-gray-600">Average Conceded: {data.goals.against.average.total}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Biggest */}
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <h2 className="text-2xl font-bold text-primary mb-4">Biggest</h2>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <p className="text-gray-600">Wins Streak: {data.biggest.streak.wins}</p>
+                                <p className="text-gray-600">Draws Streak: {data.biggest.streak.draws}</p>
+                                <p className="text-gray-600">Losses Streak: {data.biggest.streak.loses}</p>
+                            </div>
+                            <div>
+                                <p className="text-gray-600">Home Win: {data.biggest.wins.home}</p>
+                                <p className="text-gray-600">Away Win: {data.biggest.wins.away}</p>
+                                <p className="text-gray-600">Home Loss: {data.biggest.loses.home}</p>
+                                <p className="text-gray-600">Away Loss: {data.biggest.loses.away}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Clean Sheet */}
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <h2 className="text-2xl font-bold text-primary mb-4">Clean Sheet</h2>
+                        <div className="grid grid-cols-3 gap-4">
+                            <p className="text-gray-600">Home: {data.clean_sheet.home}</p>
+                            <p className="text-gray-600">Away: {data.clean_sheet.away}</p>
+                            <p className="text-gray-600">Total: {data.clean_sheet.total}</p>
+                        </div>
+                    </div>
+
+                    {/* Lineups */}
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <h2 className="text-2xl font-bold text-primary mb-4">Lineups</h2>
+                        <div className="grid grid-cols-2 gap-4">
+                            {data.lineups.map((lineup: any, index: number) => (
+                                <div key={index}>
+                                    <p className="text-gray-600">{lineup.formation}</p>
+                                    <p className="text-sm text-gray-500">Played: {lineup.played}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

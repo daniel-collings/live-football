@@ -30,6 +30,7 @@ const HorizontalBarChart: React.FC<HorizontalBarChartProps> = ({ lineups }) => {
 
     return (
         <div className="w-full max-w-lg mx-auto">
+            {/*// @ts-ignore*/}
             <Bar data={data} options={options} />
         </div>
     );

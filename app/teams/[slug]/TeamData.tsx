@@ -2,13 +2,34 @@
 
 import React from "react";
 import _teamInformation from "@/data/team-info/aston-villa.json";
+import _teamStats from "@/data/team-info/aston-villa-stats.json";
+import _lastFive from "@/data/team-info/fixture-last5.json";
+import _nextFive from "@/data/team-info/fixture-next5.json";
 import PieChart from "@/app/_components/data-visualisation/PieChart";
 import StackedBarChart from "@/app/_components/data-visualisation/StackedBarChart";
 import HorizontalBarChart from "@/app/_components/data-visualisation/HorizontalLineChart";
+import Fixtures from "@/app/teams/[slug]/FixtureCard";
+import GeneralStatCard from "@/app/teams/[slug]/GeneralStatCard";
 
 interface StatisticsProps {
     data: any;
 }
+
+const LastFixtures: React.FC = () => {
+    const lastFiveFixtures = _lastFive.response;
+
+    return (
+            <Fixtures data={lastFiveFixtures} title="Last 5 Results" />
+    );
+};
+
+const NextFixtures: React.FC = () => {
+    const nextFixtures = _nextFive.response;
+
+    return (
+            <Fixtures data={nextFixtures} title="Upcoming Fixtures" />
+    );
+};
 
 const TeamStatisticData: React.FC<StatisticsProps> = ({ data }:any) => {
     return (
@@ -38,6 +59,18 @@ const TeamStatisticData: React.FC<StatisticsProps> = ({ data }:any) => {
 
                     </div>
 
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <LastFixtures/>
+
+                    </div>
+
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <NextFixtures/>
+                    </div>
+
+                    {/*<div className="bg-white rounded-lg shadow-md p-6">*/}
+                        <GeneralStatCard data={_teamStats.response}/>
+                    {/*</div>*/}
 
 
                     {/* Goals */}
@@ -96,7 +129,7 @@ const TeamStatisticData: React.FC<StatisticsProps> = ({ data }:any) => {
                                         position: 'bottom',
                                     },
                                 },
-                            }}                       />
+                            }}/>
                     </div>
 
                     {/* Home vs Away */}
@@ -115,7 +148,7 @@ const TeamStatisticData: React.FC<StatisticsProps> = ({ data }:any) => {
                     {/* Lineups */}
                     <div className="bg-white rounded-lg shadow-md p-6">
                         <h2 className="text-2xl font-bold text-primary mb-4">Lineups</h2>
-                        <HorizontalBarChart lineups={data.lineups} />
+                        <HorizontalBarChart lineups={data.lineups}/>
                     </div>
                 </div>
             </div>

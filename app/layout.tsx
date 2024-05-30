@@ -5,6 +5,7 @@ import Navbar from "@/app/_components/layout/Navbar";
 import Footer from "@/app/_components/layout/Footer";
 import {FC, ReactNode} from "react";
 import Link from "next/link";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ const RootLayout: FC<RootLayoutProps> = ({ children}) => {
       <body className={`text-base-content {inter.className}`}>
         <Navbar/>
         <main>
+            {/*<QueryClientProvider client={queryClient}>*/}
             {children}
+            {/*</QueryClientProvider>*/}
         </main>
       <Footer/>
       </body>

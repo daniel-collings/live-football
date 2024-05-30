@@ -6,11 +6,14 @@ import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayou
 import {PlayerStats} from "@/app/_components/LeagueStatisticTable";
 import _topScores from '@/data/top-scorers.json'
 import {CellContext, ColumnDef} from "@tanstack/react-table";
-import {useState} from "react";
+import React, {useState} from "react";
 import CustomStatTable, {Player} from "@/app/_components/CustomStatTable";
 import {restructureData} from "@/utils/restructurePlayerData";
 import Tabs from "@/app/_components/Tabs";
 import {notFound} from "next/navigation";
+import _lastFive from "@/data/team-info/fixture-last5.json";
+import Fixtures from "@/app/teams/[slug]/FixtureCard";
+import _nextFive from "@/data/team-info/fixture-next5.json";
 
 interface PageProps {
     params: { slug: string };
@@ -98,16 +101,24 @@ export default function Page({params, searchParams}: PageProps) {
         <div className="">
             <ConstraintLayoutTemplate>
 
-                <Tabs tabs={['Table', 'Player Stats']} onTabChange={handleTabChange} />
+                <Tabs tabs={['Overview', 'Table', 'Player Stats']} onTabChange={handleTabChange} />
                 <div className="mt-4">
-                    {activeTab === "Table" ? (
-                        <div className="">
-                            {_league_standing.response[0].league.standings.map((o: any, i: number) => (
-                                <LeagueStandings key={i} standings={o}/>
-                            ))}
-                        </div>
-                    ) : activeTab === "Player Stats" ? (
-                        <div>
+                    {activeTab === "Overview" ? (
+                            <div className="">
+                                <h2 className="text-2xl font-bold my-4">League Overview</h2>
+
+                            </div>
+                        ) :
+                        activeTab === "Table" ? (
+                            <div className="">
+                                <h2 className="text-2xl font-bold my-4">League Standings</h2>
+
+                                {_league_standing.response[0].league.standings.map((o: any, i: number) => (
+                                    <LeagueStandings key={i} standings={o}/>
+                                ))}
+                            </div>
+                        ) : activeTab === "Player Stats" ? (
+                            <div>
                             <h2 className="text-2xl font-bold my-4">Player Stats</h2>
                             <CustomStatTable data={datasets} columns={columns} pagination={pagination}
                                              setPagination={setPagination}/>

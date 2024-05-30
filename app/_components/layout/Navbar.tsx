@@ -115,9 +115,9 @@ export default function Navbar() {
                     <Link href="/leagues" className="text-sm font-semibold leading-6 ">
                         Leagues
                     </Link>
-                    <Link href="/teams" className="text-sm font-semibold leading-6 ">
-                        Teams
-                    </Link>
+                    {/*<Link href="/teams" className="text-sm font-semibold leading-6 ">*/}
+                    {/*    Teams*/}
+                    {/*</Link>*/}
 
 
                 </Popover.Group>
@@ -192,12 +192,12 @@ export default function Navbar() {
                                 >
                                     Leagues
                                 </Link>
-                                <Link
-                                    href="/teams"
-                                    className="-mx-3 block rounded-lg px-3 py-2  font-semibold leading-7  hover:"
-                                >
-                                    Teams
-                                </Link>
+                                {/*<Link*/}
+                                {/*    href="/teams"*/}
+                                {/*    className="-mx-3 block rounded-lg px-3 py-2  font-semibold leading-7  hover:"*/}
+                                {/*>*/}
+                                {/*    Teams*/}
+                                {/*</Link>*/}
 
 
                             </div>

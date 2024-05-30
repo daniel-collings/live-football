@@ -1,12 +1,7 @@
-import React from 'react';
 
-interface CardStatsProps {
-    data: any;
-}
+import React from "react";
 
-const CardStats: React.FC<CardStatsProps> = ({ data }) => {
-    const { cards, penalty } = data;
-
+export default function InGameStatsCard({ cards, penalty }:any){
     const totalYellowCards = Object.values(cards.yellow)
         .map((item: any) => item.total)
         .reduce((sum: number, value: number) => sum + value, 0);
@@ -39,5 +34,3 @@ const CardStats: React.FC<CardStatsProps> = ({ data }) => {
         </div>
     );
 };
-
-export default CardStats;

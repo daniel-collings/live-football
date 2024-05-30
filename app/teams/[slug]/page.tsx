@@ -1,21 +1,48 @@
 import React from 'react';
-import _teamInformation from "@/data/team-info/aston-villa.json"
-import _teamStats from "@/data/team-info/aston-villa-stats.json"
 import ConstraintLayoutTemplate from "@/app/_components/template/ConstraintLayoutTemplate";
-import {notFound} from "next/navigation";
-import TeamStatisticData from "@/app/teams/[slug]/TeamData";
+import {notFound, redirect} from "next/navigation";
+import axios from "axios";
+import TeamStatisticData from "@/app/teams/[slug]/TeamStatisticData";
+import extractIdFromUrl from "@/utils/extractIdFromUrl";
 
 interface PageProps {
     params: { slug: string };
     searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default function Page({params, searchParams}: PageProps) {
-    const { response } = _teamInformation;
-    const { team, venue } = response[0];
+async function getTeamData(slug:string){
+    const teamId = extractIdFromUrl(slug)
 
-    if(!params.slug.includes("aston-villa")){
-        notFound()
+    const {data, status, statusText} = await axios.get(`http://localhost:3000/api/teams?id=${teamId}`)
+        .then(res =>res)
+        .catch(err =>{
+            return err.response;
+        })
+    if(data === null){
+        return {status, statusText}
+    }
+
+    const { team, venue } = data
+
+    return {team, venue, status, statusText}
+
+}
+
+export default async function TeamPage({params, searchParams}: PageProps) {
+    const { team, venue, status, statusText } = await getTeamData(params.slug)
+
+        switch (status){
+            case 302:
+                console.error(statusText)
+                return redirect("/limit-reached")
+            case 404:
+                console.error(statusText)
+                return notFound();
+        }
+
+
+    if (!team) {
+        return <>Loading...</>;
     }
 
     return (
@@ -29,8 +56,7 @@ export default function Page({params, searchParams}: PageProps) {
 
                 </div>
             </div>
-            {/*<TeamInfo data={_teamInformation}/>*/}
-            <TeamStatisticData data={_teamStats.response}/>
+            <TeamStatisticData teamId={params.slug} venue={venue}/>
         </ConstraintLayoutTemplate>
     );
 };

@@ -4,8 +4,7 @@ import "./globals.css";
 import Navbar from "@/app/_components/layout/Navbar";
 import Footer from "@/app/_components/layout/Footer";
 import {FC, ReactNode} from "react";
-import Link from "next/link";
-import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +21,11 @@ interface RootLayoutProps {
 const RootLayout: FC<RootLayoutProps> = ({ children}) => {
   return (
     <html lang="en" data-theme="light">
+        <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADSENSE}`}
+            crossOrigin="anonymous"
+        />
       <body className={`text-base-content {inter.className}`}>
         <Navbar/>
         <main>

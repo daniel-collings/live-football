@@ -14,6 +14,7 @@ async function getTeamData(slug:string){
     const teamId = extractIdFromUrl(slug)
 
     const {data, status, statusText} = await axios.get(`${process.env.LIVE_FOOTBALL_URL}/api/teams?id=${teamId}`)
+
         .then(res =>res)
         .catch(err =>{
             return err.response;

@@ -10,7 +10,7 @@ import extractIdFromUrl from "@/utils/extractIdFromUrl";
 async function getTeamStatistics(slug: string){
     const teamId = extractIdFromUrl(slug)
 
-    const {data, status, statusText} = await axios.get(`http://localhost:3000/api/statistics/team?id=${teamId}`)
+    const {data, status, statusText} = await axios.get(`${process.env.LIVE_FOOTBALL_URL}/api/statistics/team?id=${teamId}`)
         .then(res =>res)
         .catch(err =>{
             return err.response;

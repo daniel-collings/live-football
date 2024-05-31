@@ -161,7 +161,7 @@ export default function Page(){
                                 {filteredData[country].map((league: League, index: number) => (
 
                                     <div className="carousel-item" key={index}>
-                                        <Link href={`/leagues/${stringToSlug(league.leagueName)}`}>
+                                        <Link href={`/leagues/${stringToSlug(league.leagueName)}-${league.leagueId}`}>
                                             <div className="flex flex-col h-full space-y-4">
                                                 <Image src={league.leagueImage}
                                                        width={200}

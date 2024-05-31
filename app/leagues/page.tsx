@@ -37,77 +37,77 @@ const data: CountryLeagues = {
     "Spain": [
         {
             leagueName: "La Liga",
-            leagueId: 1,
+            leagueId: 140,
             leagueImage: "/league-logos/la-liga-logo.jpg",
         },
         {
             leagueName: "La Liga 2",
-            leagueId: 1,
+            leagueId: 141,
             leagueImage: "/league-logos/la-liga-2.jpg",
         }
     ],
     "Germany": [
         {
             leagueName: "Bundesliga",
-            leagueId: 1,
+            leagueId: 78,
             leagueImage: "/league-logos/bundesliga-logo.jpg",
         },
         {
             leagueName: "2. Bundesliga",
-            leagueId: 1,
+            leagueId: 79,
             leagueImage: "/league-logos/bundesliga-2-logo.png",
         }
     ],
     "France": [
         {
             leagueName: "Ligue 1",
-            leagueId: 1,
+            leagueId: 61,
             leagueImage: "/league-logos/ligue-1-logo.png",
         },
         {
             leagueName: "Ligue 2",
-            leagueId: 1,
+            leagueId: 62,
             leagueImage: "/league-logos/ligue2.jpg",
         }
     ],
     "Italy": [
         {
             leagueName: "Serie A",
-            leagueId: 1,
+            leagueId: 135,
             leagueImage: "/league-logos/Serie-A.png",
         },
         {
             leagueName: "Serie B",
-            leagueId: 1,
+            leagueId: 136,
             leagueImage: "/league-logos/serie-b.jpeg",
         }
     ],
     "Scotland": [
         {
             leagueName: "Scottish Premier League",
-            leagueId: 1,
+            leagueId: 179,
             leagueImage: "/league-logos/spl.jpg",
         },
         {
             leagueName: "Scottish Championship",
-            leagueId: 1,
+            leagueId: 180,
             leagueImage: "/league-logos/s-champ.png",
         },
         {
             leagueName: "Scottish League 1",
-            leagueId: 1,
+            leagueId: 183,
             leagueImage: "/league-logos/sl1.jpg",
         },
         {
             leagueName: "Scottish League 2",
-            leagueId: 1,
+            leagueId: 184,
             leagueImage: "/league-logos/sl2.png",
         }
     ],
     "United States": [
         {
             leagueName: "Major League Soccer",
-            leagueId: 1,
+            leagueId: 253,
             leagueImage: "/league-logos/mls-logo.jpg",
         }
     ],

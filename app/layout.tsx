@@ -31,9 +31,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children}) => {
         <body className={`text-base-content ${inter.className}`}>
         <Navbar/>
         <main>
-            {/*<QueryClientProvider client={queryClient}>*/}
             {children}
-            {/*</QueryClientProvider>*/}
         </main>
         <Footer/>
         </body>

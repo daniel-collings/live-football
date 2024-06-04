@@ -4,9 +4,10 @@ import {redisInstance} from "@/app/api/redisUtils";
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
-    const fixtureId = searchParams.get('id');
+    const playerId = searchParams.get('id');
+    const seasonYear = 2023
 
-    const cacheKey = `live-events-${fixtureId}`
+    const cacheKey = `player-statistics-${playerId}/${seasonYear}`
 
     const cachedData = await redisInstance.get(cacheKey);
 
@@ -23,16 +24,18 @@ export async function GET(req: NextRequest) {
 
     const options = {
         params: {
-            fixture: fixtureId,
+            id: playerId,
+            season: seasonYear
         },
     };
 
-    const lengthOfCache = 60
+    const lengthOfCache = seasonYear < (new Date().getFullYear()-1)  ? 31536000 : 86400
 
-    const data = await footballApi.get("/v3/fixtures/events", options)
+    const data = await footballApi.get("/v3/fixtures/statistics", options)
         .then(res => res.data.response);
 
     await redisInstance.set(cacheKey, JSON.stringify({ data }), {ex: lengthOfCache});
 
     return NextResponse.json({data }, { status: 200 });
+
 }

@@ -32,8 +32,6 @@ export async function GET(req: NextRequest) {
     const data = await footballApi.get("/v3/fixtures/statistics", options)
         .then(res => res.data.response);
 
-
-    // Store the data in the Redis cache with an expiration of 1 day
     await redisInstance.set(cacheKey, JSON.stringify({ data }), {ex: lengthOfCache});
 
     return NextResponse.json({data }, { status: 200 });

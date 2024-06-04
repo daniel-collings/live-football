@@ -4,9 +4,9 @@ import {redisInstance} from "@/app/api/redisUtils";
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
-    const fixtureId = searchParams.get('id');
+    const id = searchParams.get('id');
 
-    const cacheKey = `live-events-${fixtureId}`
+    const cacheKey = `team-squad-${id}`
 
     const cachedData = await redisInstance.get(cacheKey);
 
@@ -14,25 +14,22 @@ export async function GET(req: NextRequest) {
         return NextResponse.json(cachedData, {status: 200});
     }
 
-    const count = await redisInstance.incr("daily-api-limit")
+    const count = await redisInstance.incr("daily-api-limit");
 
     if(count > 100){
         return NextResponse.json(null, {status: 302, statusText: "Request limit has been reached."});
     }
 
-
     const options = {
-        params: {
-            fixture: fixtureId,
-        },
+        params: {team: id},
     };
 
-    const lengthOfCache = 60
+    const { data } = await footballApi.get("/v3/players/squad", options);
 
-    const data = await footballApi.get("/v3/fixtures/events", options)
-        .then(res => res.data.response);
+    const { team, players } = data.response[0]
 
-    await redisInstance.set(cacheKey, JSON.stringify({ data }), {ex: lengthOfCache});
+    await redisInstance.set(cacheKey, JSON.stringify({ team, players }), {ex: 262800});
 
-    return NextResponse.json({data }, { status: 200 });
+    return NextResponse.json({team, players}, { status: 200 });
+
 }

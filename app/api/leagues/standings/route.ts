@@ -29,8 +29,7 @@ export async function GET(req: NextRequest) {
         },
     };
 
-    const date = new Date();
-    const lengthOfCache = date.getFullYear() < seasonYear  ? 31536000 : 86400
+    const lengthOfCache = seasonYear < (new Date().getFullYear()-1)  ? 31536000 : 86400
 
     const { data } = await footballApi.get("/v3/standings", options);
 

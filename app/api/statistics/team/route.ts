@@ -56,13 +56,12 @@ export async function GET(req: NextRequest) {
             },
         };
 
-        const lengthOfCache = new Date().getFullYear() < seasonYear ? 31536000 : 86400
+        const lengthOfCache = seasonYear < (new Date().getFullYear()-1)  ? 31536000 : 86400
 
         const { data } = await footballApi.get("/v3/teams/statistics", options);
 
         const { league, fixtures, lineups,goals, biggest, clean_sheet, cards, penalty } = data.response
 
-        // Store the data in the Redis cache with an expiration of 1 day
         await redisInstance.set(cacheKey, JSON.stringify({ league, fixtures, lineups,goals, biggest, clean_sheet, cards, penalty }), {ex: lengthOfCache});
 
         return NextResponse.json({league, fixtures, lineups,goals, biggest, clean_sheet, cards, penalty}, { status: 200 });

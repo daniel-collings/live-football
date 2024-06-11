@@ -10,10 +10,20 @@ export default function Home() {
 
     return (
 
-        <ConstraintLayoutTemplate>
-            <div className="space-y-16">
+        <div>
+            <div className="flex flex-col bg-primary text-primary-content p-16">
+                <div>
+                    <h1>Live Football</h1>
+                    <h2>By the fans, for the fans</h2>
+                </div>
+
+            </div>
+
+
+            <ConstraintLayoutTemplate>
+                <div className="space-y-16">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 justify-between gap-4 items-center">
-                    <Link href="/leagues/premier-league">
+                    <Link href="/leagues/premier-league-39">
 
                         <Card>
                             <Image alt="Premier League"
@@ -49,7 +59,7 @@ export default function Home() {
                 </div>
 
                 <div className="">
-                    {/*// @ts-ignore*/}
+                    {/* @ts-ignore*/}
                     <LiveScores matches={response}/>
 
                 </div>
@@ -57,6 +67,8 @@ export default function Home() {
 
             </div>
         </ConstraintLayoutTemplate>
+        </div>
+
 
     );
 }

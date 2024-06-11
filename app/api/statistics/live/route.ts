@@ -1,38 +1,43 @@
-import {footballApi} from "@/app/api/api";
-import {NextRequest, NextResponse} from "next/server";
-import {redisInstance} from "@/app/api/redisUtils";
+import { footballApi } from "@/app/api/api";
+import { NextRequest, NextResponse } from "next/server";
+import { redisInstance } from "@/app/api/redisUtils";
 
 export async function GET(req: NextRequest) {
-    const { searchParams } = new URL(req.url);
-    const fixtureId = searchParams.get('id');
+  const { searchParams } = new URL(req.url);
+  const fixtureId = searchParams.get("id");
 
-    const cacheKey = `live-events-${fixtureId}`
+  const cacheKey = `live-events-${fixtureId}`;
 
-    const cachedData = await redisInstance.get(cacheKey);
+  const cachedData = await redisInstance.get(cacheKey);
 
-    if (cachedData) {
-        return NextResponse.json(cachedData, {status: 200});
-    }
+  if (cachedData) {
+    return NextResponse.json(cachedData, { status: 200 });
+  }
 
-    const count = await redisInstance.incr("daily-api-limit")
+  const count = await redisInstance.incr("daily-api-limit");
 
-    if(count > 100){
-        return NextResponse.json(null, {status: 302, statusText: "Request limit has been reached."});
-    }
+  if (count > 100) {
+    return NextResponse.json(null, {
+      status: 302,
+      statusText: "Request limit has been reached.",
+    });
+  }
 
+  const options = {
+    params: {
+      fixture: fixtureId,
+    },
+  };
 
-    const options = {
-        params: {
-            fixture: fixtureId,
-        },
-    };
+  const lengthOfCache = 60;
 
-    const lengthOfCache = 60
+  const data = await footballApi
+    .get("/v3/fixtures/events", options)
+    .then((res) => res.data.response);
 
-    const data = await footballApi.get("/v3/fixtures/events", options)
-        .then(res => res.data.response);
+  await redisInstance.set(cacheKey, JSON.stringify({ data }), {
+    ex: lengthOfCache,
+  });
 
-    await redisInstance.set(cacheKey, JSON.stringify({ data }), {ex: lengthOfCache});
-
-    return NextResponse.json({data }, { status: 200 });
+  return NextResponse.json({ data }, { status: 200 });
 }
